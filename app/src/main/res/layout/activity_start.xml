@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal|center_vertical"> <!-- Center-align the content horizontally and vertically -->
+
+    <!-- Content centered in the vertical space -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"> <!-- Center-align the content horizontally and vertically -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Sudoku"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <!-- Attribution TextView at the bottom -->
+        <TextView
+            android:id="@+id/attribution_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by Mehul Uniyal"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"/> <!-- Center-align the attribution text horizontally -->
+
+
+        <!-- Buttons centered below the title -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp"
+            android:text="Start Game"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"
+            android:text="Exit"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

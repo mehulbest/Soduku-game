@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Home Button in the Top Left -->
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textSize="10sp"
+        android:padding="4dp"
+        android:maxWidth="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <Spinner
+        android:id="@+id/difficultySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/difficulty_levels"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Timer Display Centered Horizontally Below the Home Button -->
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/homeButton"
+        android:layout_marginTop="16dp"/>
+
+    <!-- GridLayout for Sudoku Board Below the Timer Display -->
+    <GridLayout
+        android:id="@+id/sudoku_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/timerTextView"
+        android:layout_above="@+id/actionButtonsContainer"
+        android:layout_weight="1"
+        android:columnCount="9"
+        android:rowCount="9"
+        android:background="@drawable/grid_background" />
+
+    <!-- Buttons for Sudoku actions at the Bottom -->
+    <LinearLayout
+        android:id="@+id/actionButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/hintButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hint (10)"
+            android:textSize="10sp"
+            android:padding="4dp"
+            android:maxWidth="80dp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textSize="10sp"
+            android:padding="4dp"
+            android:maxWidth="80dp" />
+
+        <Button
+            android:id="@+id/eraseAllButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Erase All"
+            android:textSize="10sp"
+            android:padding="4dp"
+            android:maxWidth="80dp" />
+
+        <Button
+            android:id="@+id/solveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Solve"
+            android:textSize="10sp"
+            android:padding="4dp"
+            android:maxWidth="80dp" />
+
+        <Button
+            android:id="@+id/solutionButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Solution"
+            android:textSize="10sp"
+            android:padding="4dp"
+            android:maxWidth="80dp" />
+    </LinearLayout>
+
+</RelativeLayout>
